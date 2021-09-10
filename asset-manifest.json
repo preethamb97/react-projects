@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/preethamb97/react-projects/projectreact/static/css/main.4d515475.chunk.css",
+    "main.js": "/preethamb97/react-projects/projectreact/static/js/main.fa54ad5a.chunk.js",
+    "main.js.map": "/preethamb97/react-projects/projectreact/static/js/main.fa54ad5a.chunk.js.map",
+    "runtime-main.js": "/preethamb97/react-projects/projectreact/static/js/runtime-main.c19c15b6.js",
+    "runtime-main.js.map": "/preethamb97/react-projects/projectreact/static/js/runtime-main.c19c15b6.js.map",
+    "static/js/2.b381d4c3.chunk.js": "/preethamb97/react-projects/projectreact/static/js/2.b381d4c3.chunk.js",
+    "static/js/2.b381d4c3.chunk.js.map": "/preethamb97/react-projects/projectreact/static/js/2.b381d4c3.chunk.js.map",
+    "static/js/3.16e81bdf.chunk.js": "/preethamb97/react-projects/projectreact/static/js/3.16e81bdf.chunk.js",
+    "static/js/3.16e81bdf.chunk.js.map": "/preethamb97/react-projects/projectreact/static/js/3.16e81bdf.chunk.js.map",
+    "index.html": "/preethamb97/react-projects/projectreact/index.html",
+    "static/css/main.4d515475.chunk.css.map": "/preethamb97/react-projects/projectreact/static/css/main.4d515475.chunk.css.map",
+    "static/js/2.b381d4c3.chunk.js.LICENSE.txt": "/preethamb97/react-projects/projectreact/static/js/2.b381d4c3.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c19c15b6.js",
+    "static/js/2.b381d4c3.chunk.js",
+    "static/css/main.4d515475.chunk.css",
+    "static/js/main.fa54ad5a.chunk.js"
+  ]
+}
