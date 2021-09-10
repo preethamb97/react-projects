@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Tweet from './tweet';
 import './App.css';
 function App() {
+  const [getColor, setColor] = useState(false);
   const [users, setUsers] = useState([{
     name: 'preetham',
     message: 'test message 1',
@@ -15,8 +16,12 @@ function App() {
     message: 'test message 3',
     likes: '453 likes'
   }]);
+
+  const ColorSet = () => {
+    setColor(!getColor);
+  };
   return (
-    <div className="app">
+    <div onClick={ColorSet} className={getColor ? 'blueapp' : 'greenapp'}>
       {users.map(user => (
         <Tweet name={user.name} message={user.message} likes={user.likes} />
       ))}

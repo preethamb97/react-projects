@@ -1,10 +1,19 @@
-.app{
+.blueapp{
   min-height: 100vh;
   background: rgb(57, 184, 227);
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
+
+.greenapp{
+  min-height: 100vh;
+  background: rgb(55, 255, 0);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
 
 .tweet{
   height: 300px;
