@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Tweet from './tweet';
 import './App.css';
 function App() {
@@ -20,6 +20,11 @@ function App() {
   const ColorSet = () => {
     setColor(!getColor);
   };
+
+  useEffect(() => {
+    console.log(getColor);
+    document.title = new Date();
+  }, [getColor, users]);
   return (
     <div onClick={ColorSet} className={getColor ? 'blueapp' : 'greenapp'}>
       {users.map(user => (
