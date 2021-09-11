@@ -12,7 +12,7 @@
     "react-scripts": "4.0.3",
     "web-vitals": "1.1.2"
   },
-  "homepage": "https://github.com/preethamb97/react-projects/projectreact",
+  "homepage": "https://react-build-app.s3.ap-south-1.amazonaws.com/reactbasicapp",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",

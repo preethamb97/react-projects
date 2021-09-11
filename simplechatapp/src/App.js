@@ -4,7 +4,7 @@ import './App.css';
 import io from 'socket.io-client';
 import TextField from '@material-ui/core/TextField';
 
-const socket = io.connect('http://localhost:4000');
+const socket = io.connect('http://localhost:4000', { transports: ["websocket"] });
 
 function App() {
   const [state, setState] = useState({ message: '', name: '' });
@@ -12,7 +12,9 @@ function App() {
 
   useEffect(() => {
     socket.on('message', ({ name, message }) => {
+      console.log('new message arrived', { name, message });
       setChat([...chat, { name, message }]);
+      console.log('===========chat', { name, message })
     });
   });
   const onMessageSubmit = (e) => {
@@ -27,10 +29,10 @@ function App() {
   };
 
   const renderChat = () => {
-    return chat.map(({ name, message }, index) => {
+    return chat.map((data, index) => {
       <div key={index}>
         <h3>
-          {name}: <span>{message}</span>
+          {data.name}:{data.message}
         </h3>
       </div>
     });
