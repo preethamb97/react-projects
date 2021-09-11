@@ -1,16 +1,33 @@
+const logger = require('./src/core/logger');
+const { API_PORT, IS_HTTPS } = require('./src/config/settings');
+const chatHistoryQueryLib = require('./src/library/queryLib/mysql/queries/userChat');
+const morgan = require('morgan');
+const helmet = require('helmet');
+const fs = require('fs');
 const app = require('express')();
+const server = (IS_HTTPS) ? require('https').createServer({
+  key: fs.readFileSync('/home/ubuntu/certs/server.key'),
+  cert: fs.readFileSync('/home/ubuntu/certs/server.crt')
+}, app) : require('http').createServer(app);
+const cors = require('cors')
 
-const http = require('http').createServer(app);
-const io = require('socket.io')(http);
+const io = require('socket.io')(server, { 'pingTimeout': 10000, 'pingInterval': 3000 });
 
-io.on('connection', socket => {
-  console.log('connection recieved')
-  socket.on('message', ({ name, message }) => {
-    console.log('message recieved', { name, message })
+app.use(cors());
+app.use(morgan('dev'));
+app.use(helmet());
+
+app.get('/', async (req, res) => {
+  res.status(404).send('<h1>Page not Found</h1>');
+});
+
+io.on('connection', async (socket) => {
+  socket.on('message', async ({ name, message }) => {
     io.emit('message', { name, message });
+    await chatHistoryQueryLib.insertNewChat({ name, message });
   });
 });
 
-http.listen(4000, () => {
-  console.log('app running on port 4000');
+server.listen(API_PORT, () => {
+  logger.info(`App running on port ${API_PORT}`);
 });
