@@ -1,0 +1,57 @@
+.App {
+  margin-top: 18px;
+  margin-left: 20px;
+}
+
+.pageHeader {
+  align-items: top;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.pageHeader .userName {
+  font-weight: 750;
+  font: 27px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.pageHeader .followers{
+  color: #b1b1b1;
+}
+
+.pageHeader .about {
+  color: #b1b1b1;
+}
+
+.pageHeader .follow {
+  color: #fff;
+  background: #1A8917;
+  font-size: 17px;
+  padding: 10px;
+  border-radius: 26px;
+}
+
+.pageHeader .message {
+  color: #fff;
+  background: #1A8917;
+  font-size: 17px;
+  padding: 10px;
+  border-radius: 100px;
+}
+
+.pageHeader .signin{
+  border: 0;
+  background: #fff;
+  color:#1A8917;
+}
+
+.pageHeader .getStarted{
+  border-color: #1A8917;
+  background: #fff;
+  color:#1A8917;
+  border-radius: 18px;
+  font-size: 18px;
+  padding: 9px;
+}

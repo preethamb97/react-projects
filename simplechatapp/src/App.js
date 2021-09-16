@@ -4,7 +4,7 @@ import './App.css';
 import io from 'socket.io-client';
 import TextField from '@material-ui/core/TextField';
 
-const socket = io.connect('http://65.0.11.27:4000', { transports: ["websocket"] });
+const socket = io.connect('https://65.0.11.27:4001', { transports: ["websocket"] });
 
 function App() {
   const [state, setState] = useState({ message: '', name: '' });
